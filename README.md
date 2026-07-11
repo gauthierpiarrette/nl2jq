@@ -123,8 +123,7 @@ once per system and appended to the ledger.
 
 `pipeline/` synthetic data (schemas → docs → grammar → execute) · `train/` tokenizer +
 from-scratch model + LoRA · `bench/` frozen benchmark, gates, harness, one-shot runner ·
-`cli/` jqgen + grounded decoding · `grammars/jq.gbnf` ·
-`bench/FROZEN_BENCH_DESIGN.md` benchmark methodology.
+`cli/` jqgen + grounded decoding · `grammars/jq.gbnf`.
 
 ## License
 

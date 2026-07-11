@@ -32,3 +32,5 @@ bench/devnovel/candidates_*
 bench/devnovel/oracle_*
 SPEC.md
 v2.md
+RUNBOOK.md
+bench/FROZEN_BENCH_DESIGN.md
