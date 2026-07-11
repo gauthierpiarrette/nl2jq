@@ -95,3 +95,5 @@ loads without errors — but in our testing (llama.cpp b9957/b9964, CPU inferenc
 and Linux) generation for this hybrid GDN+MoE architecture never completed in reasonable
 time. We don't publish artifacts whose output we could not verify. Use the `transformers`
 path above; a GGUF will follow when llama.cpp's kernels for this architecture mature.
+
+Code, benchmark tooling, and training pipeline: [github.com/gauthierpiarrette/nl2jq](https://github.com/gauthierpiarrette/nl2jq)

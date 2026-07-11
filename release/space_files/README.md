@@ -20,4 +20,4 @@ entirely inside this Space — your JSON goes nowhere else.
 Honest expectations: frozen-benchmark pass@1 is **0.40** for this backend (see the
 [model card](https://huggingface.co/gauthierpiarrette/nl2jq-qwen3-0.6b)); free-CPU
 queries take ~15–60s. The generated program is always displayed — read it before
-trusting the result. For real use, install the CLI: `pip install -e .` from the repo.
+trusting the result. For real use, install the CLI: `pip install -e .` from the [repo](https://github.com/gauthierpiarrette/nl2jq).

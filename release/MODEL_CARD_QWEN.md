@@ -103,3 +103,5 @@ Three honest readings:
 ## License
 
 Apache-2.0 (inherits the base model's license). Fine-tuned on CC BY 4.0 synthetic data.
+
+Code, benchmark tooling, and training pipeline: [github.com/gauthierpiarrette/nl2jq](https://github.com/gauthierpiarrette/nl2jq)

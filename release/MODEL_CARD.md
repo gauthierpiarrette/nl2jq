@@ -128,3 +128,5 @@ non-degenerate output.
 ## License
 
 Apache-2.0.
+
+Code, benchmark tooling, and training pipeline: [github.com/gauthierpiarrette/nl2jq](https://github.com/gauthierpiarrette/nl2jq)

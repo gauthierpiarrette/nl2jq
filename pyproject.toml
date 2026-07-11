@@ -21,6 +21,7 @@ dependencies = [
 jqgen = "cli.jqgen:main"
 
 [project.urls]
+Repository = "https://github.com/gauthierpiarrette/nl2jq"
 Model = "https://huggingface.co/gauthierpiarrette/nl2jq-40m"
 Dataset = "https://huggingface.co/datasets/gauthierpiarrette/nl2jq"
 Benchmark = "https://huggingface.co/datasets/gauthierpiarrette/nl2jq-bench"

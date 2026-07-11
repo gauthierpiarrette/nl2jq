@@ -58,11 +58,11 @@ the items is a new version with a new hash; v1.0.0 never changes.
   full training vocabulary (687 names incl. constructible compounds) with a near-miss bar
   (no shared ≥4-char prefixes, no small-edit variants, no common abbreviations) and an
   enum-value gate (no training enum value appears as an input value or program literal).
-  The gate ships in the project repo (`bench/validate_novelty.py`) and rebuilds the
+  The gate ships in the project repo ([`bench/validate_novelty.py`](https://github.com/gauthierpiarrette/nl2jq/blob/main/bench/validate_novelty.py)) and rebuilds the
   forbidden vocabulary from the generator source at check time.
 - **T5 is beyond-grammar.** The 60 T5 items use only constructs the training-data grammar
   provably never emits (verified by an emission audit + a source gate,
-  `bench/audit_coverage.py`). **Report the T5-only score separately** — it is the
+  [`bench/audit_coverage.py`](https://github.com/gauthierpiarrette/nl2jq/blob/main/bench/audit_coverage.py)). **Report the T5-only score separately** — it is the
   generalization headline; a model cannot have seen these operation shapes in `nl2jq`.
 - **Novel domains.** 12 domains disjoint from the training set's (clinical, gradebook,
   transit, sports, music, weather, real-estate, recipes, library, gaming, lab, civic),
@@ -164,6 +164,7 @@ All items are original, authored for this benchmark (no scraped content, no Stac
 Overflow), execution-verified under jq 1.7.1. Reference programs and inputs are
 CC BY 4.0.
 
+Code: [github.com/gauthierpiarrette/nl2jq](https://github.com/gauthierpiarrette/nl2jq).
 Companion training set: [`gauthierpiarrette/nl2jq`](https://huggingface.co/datasets/gauthierpiarrette/nl2jq).
 Models: [`nl2jq-40m`](https://huggingface.co/gauthierpiarrette/nl2jq-40m),
 [`nl2jq-qwen3-0.6b`](https://huggingface.co/gauthierpiarrette/nl2jq-qwen3-0.6b),

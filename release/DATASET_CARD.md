@@ -45,7 +45,9 @@ A fully synthetic, execution-verified dataset for translating natural language i
 Schema → documents → type-directed jq program → **execute** → filter degenerate/erroring
 programs → behavioral dedup → natural-language description (templates + paraphrases).
 Validation holds out entire schema families and program templates, so models are tested
-on compositional generalization rather than memorization.
+on compositional generalization rather than memorization. Full method in the
+[project spec](https://github.com/gauthierpiarrette/nl2jq/blob/main/SPEC.md); generation code in the
+[project repo](https://github.com/gauthierpiarrette/nl2jq).
 
 ## Statistics
 
@@ -73,3 +75,5 @@ jq -c '<program>' <<< '<input_doc>'   # equals expected_output
 
 CC BY 4.0. Contains no scraped or copyrighted content — schemas, values, and programs are
 all generated. Field-name vocabularies are drawn from public API shapes (structure only).
+
+Code: [github.com/gauthierpiarrette/nl2jq](https://github.com/gauthierpiarrette/nl2jq)
