@@ -30,3 +30,5 @@ bench/frozen/preds_*
 bench/frozen/oracle_*
 bench/devnovel/candidates_*
 bench/devnovel/oracle_*
+SPEC.md
+v2.md
