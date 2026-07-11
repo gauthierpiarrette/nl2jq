@@ -15,6 +15,8 @@ size_categories:
 
 # nl2jq
 
+*Part of the **nl2jq** project — [all artifacts](https://huggingface.co/collections/gauthierpiarrette/nl2jq-natural-language-to-jq-locally-6a5299203df3832415275223) · [code + CLI](https://github.com/gauthierpiarrette/nl2jq) · [live demo](https://huggingface.co/spaces/gauthierpiarrette/nl2jq) · [benchmark](https://huggingface.co/datasets/gauthierpiarrette/nl2jq-bench)*
+
 A fully synthetic, execution-verified dataset for translating natural language into
 [jq](https://jqlang.github.io/jq/) programs. The first public dataset for this task.
 
@@ -64,6 +66,27 @@ on compositional generalization rather than memorization. Full method in the
 Every program is behaviorally deduplicated (programs with identical outputs across the
 sampled documents are collapsed), and validation holds out **entire schema families**, so
 a model cannot score on val by memorizing a family seen in train.
+
+
+## Versions & lineage (which data trained which model)
+
+**This published snapshot is the v5 generation** (seed 4000). The shipped models were
+trained on *later* generations, reproducible from the
+[project repo](https://github.com/gauthierpiarrette/nl2jq)'s pipeline code — they are not
+subsets of this snapshot:
+
+| generation | seed | field-name recipe | trained models (shipped weights) |
+|---|---|---|---|
+| **v5 (this snapshot)** | 4000 | fixed 687-name vocabulary | superseded v5 fine-tunes only |
+| v6 | 6000 | per-example-unique names (curated components) | [`nl2jq-qwen3-0.6b`](https://huggingface.co/gauthierpiarrette/nl2jq-qwen3-0.6b) |
+| v7 | 7000 | unique names from 34.8k real-text subword components | [`nl2jq-40m`](https://huggingface.co/gauthierpiarrette/nl2jq-40m), [`nl2jq-qwen3.5-2b`](https://huggingface.co/gauthierpiarrette/nl2jq-qwen3.5-2b) |
+
+Reproduction: `python -m pipeline.build_parallel --n 2000000 --seed <seed>` with the repo
+at the released commit. Fine-tune subsets (150k rows) are deterministic — an evenly-spaced
+sample over the generated train split (`train/finetune_qwen.py --limit 150000`). One
+caveat for byte-exact v7 regeneration: `pipeline/wordpool_v7.json` was profanity-filtered
+*after* the v7 models were trained (documented in the file itself); new corpora should use
+the filtered pool.
 
 ## Verifying a row yourself
 

@@ -54,6 +54,13 @@ jqgen --no-run "..."   # print the program, don't execute
 jqgen --k 1 "..."      # single greedy generation (default: 4 candidates + execution filter)
 ```
 
+Which backend?
+
+| backend | frozen pass@1 | CPU latency | pick when |
+|---|---|---|---|
+| `qwen` (0.6B, **default**) | 0.40 | ~1–3s | everyday use |
+| `qwen-2b` | 0.48 (CLI config) | ~3–8s | accuracy over speed (T5 slightly lower) |
+
 The default decode is the benchmarked configuration: sample 4 candidates, repair field
 references against the keys actually present in your JSON, return the first candidate
 whose execution produces informative output. Models auto-download from the Hub on first

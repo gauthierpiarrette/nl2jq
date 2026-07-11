@@ -17,6 +17,8 @@ metrics:
 
 # nl2jq-qwen3-0.6b
 
+*Part of the **nl2jq** project — [all artifacts](https://huggingface.co/collections/gauthierpiarrette/nl2jq-natural-language-to-jq-locally-6a5299203df3832415275223) · [code + CLI](https://github.com/gauthierpiarrette/nl2jq) · [live demo](https://huggingface.co/spaces/gauthierpiarrette/nl2jq) · [benchmark](https://huggingface.co/datasets/gauthierpiarrette/nl2jq-bench)*
+
 A LoRA fine-tune of [Qwen3-0.6B](https://huggingface.co/Qwen/Qwen3-0.6B) that translates a
 natural-language request plus a JSON sample into a [jq](https://jqlang.github.io/jq/)
 program. It is the **practical baseline** companion to the from-scratch
@@ -25,6 +27,9 @@ pretrained language priors make it markedly more reliable at **copying novel fie
 from your JSON — which is what most real CLI use needs.
 
 The LoRA adapter has been merged into the base weights, so it loads as an ordinary model.
+
+**This is the recommended default backend of the `jqgen` CLI** — the best
+latency/accuracy balance for local use (~1–3s per query on laptop CPU).
 
 ## Usage
 

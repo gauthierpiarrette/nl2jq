@@ -1,0 +1,39 @@
+{
+  "benchmark": "gauthierpiarrette/nl2jq-bench",
+  "version": "1.0.0",
+  "freeze_sha256": "25e7c01360707b30df93e7c1ed26997b3bb3ee7840a093d024bb4d16f489c5de",
+  "jq_version": "1.7.1",
+  "n_items": 400,
+  "protocol": "one-shot; no selection or iteration against the frozen set",
+  "model": "gauthierpiarrette/nl2jq-40m",
+  "results": [
+    {
+      "system": "nl2jq-40m-v7",
+      "decoding": "greedy",
+      "pass_at_1": 0.04,
+      "valid_at_1": 0.56,
+      "tiers": {
+        "T1": 0.08,
+        "T2": 0.08,
+        "T3": 0.02,
+        "T4": 0.01,
+        "T5": 0.02
+      },
+      "t5_generalization": 0.02
+    },
+    {
+      "system": "nl2jq-40m-v7 + input-grounded decoding",
+      "decoding": "k=4 sampling + field repair + execution filter",
+      "pass_at_1": 0.09,
+      "valid_at_1": 0.76,
+      "tiers": {
+        "T1": 0.17,
+        "T2": 0.14,
+        "T3": 0.08,
+        "T4": 0.01,
+        "T5": 0.05
+      },
+      "t5_generalization": 0.05
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "benchmark": "gauthierpiarrette/nl2jq-bench",
+  "version": "1.0.0",
+  "freeze_sha256": "25e7c01360707b30df93e7c1ed26997b3bb3ee7840a093d024bb4d16f489c5de",
+  "jq_version": "1.7.1",
+  "n_items": 400,
+  "protocol": "one-shot; no selection or iteration against the frozen set",
+  "model": "gauthierpiarrette/nl2jq-qwen3-0.6b",
+  "results": [
+    {
+      "system": "nl2jq-qwen3-0.6b-v6",
+      "decoding": "greedy",
+      "pass_at_1": 0.4,
+      "valid_at_1": 0.73,
+      "tiers": {
+        "T1": 0.65,
+        "T2": 0.52,
+        "T3": 0.36,
+        "T4": 0.28,
+        "T5": 0.2
+      },
+      "t5_generalization": 0.2
+    }
+  ]
+}

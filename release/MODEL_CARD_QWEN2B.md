@@ -17,10 +17,17 @@ metrics:
 
 # nl2jq-qwen3.5-2b
 
+*Part of the **nl2jq** project — [all artifacts](https://huggingface.co/collections/gauthierpiarrette/nl2jq-natural-language-to-jq-locally-6a5299203df3832415275223) · [code + CLI](https://github.com/gauthierpiarrette/nl2jq) · [live demo](https://huggingface.co/spaces/gauthierpiarrette/nl2jq) · [benchmark](https://huggingface.co/datasets/gauthierpiarrette/nl2jq-bench)*
+
 A LoRA fine-tune of [Qwen3.5-2B](https://huggingface.co/Qwen/Qwen3.5-2B) that translates a
 natural-language request plus a JSON sample into a [jq](https://jqlang.org/) program.
 **The most accurate local backend** in the nl2jq family — the `jqgen --backend qwen-2b`
 option. The LoRA adapter is merged; it loads as an ordinary model.
+
+The [0.6B sibling](https://huggingface.co/gauthierpiarrette/nl2jq-qwen3-0.6b) remains
+the CLI's **default**; choose this backend when accuracy on everyday queries matters more
+than latency (~3–8s per query on laptop CPU; note T5-generalization is slightly *lower*
+than the 0.6B's — see the table).
 
 ## Results
 

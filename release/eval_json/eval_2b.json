@@ -1,0 +1,39 @@
+{
+  "benchmark": "gauthierpiarrette/nl2jq-bench",
+  "version": "1.0.0",
+  "freeze_sha256": "25e7c01360707b30df93e7c1ed26997b3bb3ee7840a093d024bb4d16f489c5de",
+  "jq_version": "1.7.1",
+  "n_items": 400,
+  "protocol": "one-shot; no selection or iteration against the frozen set",
+  "model": "gauthierpiarrette/nl2jq-qwen3.5-2b",
+  "results": [
+    {
+      "system": "nl2jq-qwen3.5-2b-v7",
+      "decoding": "greedy",
+      "pass_at_1": 0.455,
+      "valid_at_1": 0.75,
+      "tiers": {
+        "T1": 0.67,
+        "T2": 0.61,
+        "T3": 0.47,
+        "T4": 0.33,
+        "T5": 0.13
+      },
+      "t5_generalization": 0.13
+    },
+    {
+      "system": "nl2jq-qwen3.5-2b-v7 + exec-rerank (CLI config)",
+      "decoding": "k=4 sampling + execution filter",
+      "pass_at_1": 0.48,
+      "valid_at_1": 0.82,
+      "tiers": {
+        "T1": 0.75,
+        "T2": 0.61,
+        "T3": 0.47,
+        "T4": 0.35,
+        "T5": 0.18
+      },
+      "t5_generalization": 0.18
+    }
+  ]
+}

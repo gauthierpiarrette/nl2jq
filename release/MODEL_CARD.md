@@ -16,6 +16,8 @@ metrics:
 
 # nl2jq-40m
 
+*Part of the **nl2jq** project — [all artifacts](https://huggingface.co/collections/gauthierpiarrette/nl2jq-natural-language-to-jq-locally-6a5299203df3832415275223) · [code + CLI](https://github.com/gauthierpiarrette/nl2jq) · [live demo](https://huggingface.co/spaces/gauthierpiarrette/nl2jq) · [benchmark](https://huggingface.co/datasets/gauthierpiarrette/nl2jq-bench)*
+
 A 37M-parameter decoder-only language model trained **from scratch** to translate a
 natural-language request plus a JSON sample into a [jq](https://jqlang.github.io/jq/)
 program. Runs locally on CPU in well under a second.

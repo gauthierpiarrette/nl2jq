@@ -22,6 +22,8 @@ configs:
 
 # nl2jq-bench
 
+*Part of the **nl2jq** project — [all artifacts](https://huggingface.co/collections/gauthierpiarrette/nl2jq-natural-language-to-jq-locally-6a5299203df3832415275223) · [code + CLI](https://github.com/gauthierpiarrette/nl2jq) · [live demo](https://huggingface.co/spaces/gauthierpiarrette/nl2jq) · [dataset](https://huggingface.co/datasets/gauthierpiarrette/nl2jq)*
+
 An **execution-scored, frozen** benchmark for natural-language → [jq](https://jqlang.org/)
 program generation. Each item is a realistic request over a small JSON input with a
 verified reference program; models are scored on whether their program's **output** matches
