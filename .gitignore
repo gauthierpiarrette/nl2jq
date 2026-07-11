@@ -1,0 +1,32 @@
+.venv/
+__pycache__/
+*.pyc
+data/
+artifacts/
+bin/jq
+*.gguf
+*.pt
+wandb/
+.DS_Store
+
+# large exports live on the HF hub, not in git (train.jsonl.gz > GitHub 100MB limit)
+release/data/
+*.egg-info/
+
+# sealed canary set: plaintext never committed/published; only the .enc + hash
+bench/sealed/*.jsonl
+build/
+
+# local ship-staging area (never committed; publish from the real tree)
+ship/
+
+# internal working notes
+PROJECT_RECAP.md
+# benchmark-development intermediates (artifacts of record are the frozen jsonl + FREEZE + RESULTS)
+bench/frozen/candidates_*
+bench/frozen/review_batches/
+bench/frozen/verdicts.json
+bench/frozen/preds_*
+bench/frozen/oracle_*
+bench/devnovel/candidates_*
+bench/devnovel/oracle_*

@@ -1,0 +1,8 @@
+{
+  "bench_version": "nl2jq-bench v1 (100 items, execution-scored, jq 1.7.1)",
+  "scoring": "pass@1 exact execution match; array/stream forms treated as equivalent",
+  "baselines": {
+    "claude-opus-4-8 (zero-shot)": {"n": 100, "pass@1": 0.75, "valid@1": 0.83,
+      "note": "UPPER BOUND — Stack-Overflow-style items may be in pretraining; the from-scratch model has seen none of it"}
+  }
+}

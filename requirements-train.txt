@@ -1,0 +1,4 @@
+# additional deps for training on a GPU box
+accelerate
+peft>=0.19
+safetensors

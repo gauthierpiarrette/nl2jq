@@ -1,0 +1,8 @@
+grammar sources at nl2jq-bench v1.0.0 freeze (2026-07-10)
+T5 constructs verified ABSENT from these exact files (audit_coverage rule A):
+98b42770046f920e0312b042bf8df23e39da0cb2b8ea0e301290a5a04645d61c  pipeline/grammar.py
+9402f0646cf85f6136d142ec8280b33ba4c3e14f9238771d417da692a950655e  pipeline/grammar_ext.py
+
+Later grammar versions MAY legitimately cover these constructs (they are core
+jq); the frozen benchmark does not change. grammar_covered flags in v1.0.0
+refer to the grammar at these hashes.

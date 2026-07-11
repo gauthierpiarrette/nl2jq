@@ -1,0 +1,10 @@
+nl2jq-bench v1.0.0 — FREEZE RECORD
+frozen: 2026-07-10
+public file: nl2jq-bench-1.0.0.jsonl
+public sha256: 25e7c01360707b30df93e7c1ed26997b3bb3ee7840a093d024bb4d16f489c5de
+public items: 400  tier histogram: {1: 60, 2: 100, 3: 100, 4: 80, 5: 60}
+sealed sha256: e0648fecdba403d0599ffecfdae1fc1d2395b5006fb7a0056819fe15d21ab1e7
+sealed items: 100 (unpublished canary set)
+jq: jq-1.7.1  binary sha256: 0bbe619e663e0de2c550be2fe0d240d076799d6f8a652b70fa04aea8a8362e8a
+identity: the public sha256 above IS the benchmark's identity. Any change to
+the items is a new version with a new hash; this file is append-only.
